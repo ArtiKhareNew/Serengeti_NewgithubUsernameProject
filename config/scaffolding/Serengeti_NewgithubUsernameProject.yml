@@ -8,7 +8,50 @@ packages:
   gitUsername: ArtiKhareNew
   gitBranch: main
 - name: LowerFSPackage
+  version: "2.0"
   gitServerName: srcGithubCtrl_Arti
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareNew
   gitBranch: main
+- name: substractpackage
+  gitServerName: srcCtrl_gitlab_Arti
+  gitUrl: https://gitlab.com/ArtiKhareGitlabnew
+  gitUsername: ArtiKhareGitlabnew
+  gitBranch: master
+services:
+- serviceName: project.serengeti_newgithubusername.integrations:gcd
+  packages:
+  - name: Serengeti_NewgithubUsernameProject
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "2.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.743
+- serviceName: project.serengeti_newgithubusername.integrations:githubfs
+  packages:
+  - name: Serengeti_NewgithubUsernameProject
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "2.0"
+- serviceName: LowerFSPackage:lowerFS
+  packages:
+  - name: LowerFSPackage
+    version: "2.0"
+- serviceName: pub.string:toLower
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.743
+- serviceName: project.serengeti_newgithubusername.integrations:githubfsnew
+  packages:
+  - name: Serengeti_NewgithubUsernameProject
+    version: "1.0"
+  - name: substractpackage
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "2.0"
